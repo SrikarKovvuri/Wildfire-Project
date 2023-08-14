@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wildfire Application</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Leaflet/Leaflet.heat@master/dist/leaflet-heat.js"></script>
+</head>
+<body>
+  <h1>Wildfire Application</h1>
+  <h2>Interactive Map</h2>
+  <div id="map"></div>
+  <h2>Heatmap</h2>
+  <div id="heatmap"></div>
+  <h2>Scatter Plot</h2>
+  <div id="plot"></div>
+  <script src="{{ url_for('static', filename='map.js') }}"></script>
+  <script src="{{ url_for('static', filename='scatter_plot.js') }}"></script>
+  <script src="{{ url_for('static', filename='heatmap.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM7E9NjSIypxtfikypGIkSQfu4T-316nI&callback=initMap" async defer></script>
+</body>
+</html>
